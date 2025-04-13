@@ -64,8 +64,35 @@ const agents = [
 
 window.onload = function () {
   const agentList = document.getElementById("agent-list");
+  const filter = document.getElementById("filter");
 
-  agents.forEach(agent => {
+  const roles = ["All", ...new Set(agents.map(agent => agent.role))];
+
+  roles.forEach(role => {
+    const button = document.createElement("button");
+    button.textContent = role;
+    button.className = "filter-btn";
+    button.onclick = () => renderAgents(role);
+    filter.appendChild(button);
+  });
+
+  renderAgents("All");
+};
+
+function playVoiceLine(filePath){
+  const audio = new Audio(filePath);
+  audio.play();
+}
+
+function renderAgents(selectedRole){
+  const agentList = document.getElementById("agent-list");
+  agentList.innerHTML = "";
+
+  const filteredAgents = selectedRole === "All"
+    ? agents
+    : agents.filter(agent => agent.role === selectedRole);
+
+  filteredAgents.forEach(agent => {
     const card = document.createElement("div");
     card.className = "agent-card";
 
@@ -77,10 +104,5 @@ window.onload = function () {
     `;
 
     agentList.appendChild(card);
-  });
-};
-
-function playVoiceLine(filePath){
-  const audio = new Audio(filePath);
-  audio.play();
+  })
 }

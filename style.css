@@ -1,54 +1,96 @@
+:root {
+  --pri: #ffffff;
+  --sec: #ff4654;
+  --ter: #233046;
+  --bg: #111823;
+  --shadow: #53191f;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #111823;
+  background-color: var(--bg);
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* .main-header {
-  color: #ff4654;
-  font-size: x-large;
-  padding-bottom: 10px;
-} */
-
 .title {
-  text-align: left;
+  text-align: center;
   margin-left: 2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 0rem;
-  font-size: 3rem;
-  /* font-style: italic; */
+  font-size: 5rem;
+  font-style: italic;
   font-weight: bold;
   text-transform: uppercase;
-  color: #ff4654;
+  color: var(--sec);
 }
 
 .catchline {
-  text-align: left;
+  text-align: center;
   margin-top: 0;
   margin-left: 2rem;
   font-size: .8em;
   font-weight: normal;
-  color: #ffff;
+  color: var(--pri);
 }
 
 .divider {
   margin-right: 2rem;
   margin-left: 2rem;
-  border: 1px solid #233046;
+  border: 1px solid var(--ter);
+}
+
+.placeholder {
+  gap: 2;
+  display:flex;
+  color: var(--shadow);
+  text-transform: uppercase;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0 0 1rem 2rem;
+  width: 10%;
+}
+
+.filter-btn {
+  font-size: medium;
+  padding: 1rem;
+}
+
+.agent {
+  display: flex;
+  flex: 3;
 }
 
 .section-title {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 2rem;
-  margin-top: 1rem;
-  margin-bottom: 0;
-  color: #ff4654;
+  margin: 0 2em 0 2rem;
+  color: var(--sec);
   font-weight:bold;
   text-transform: uppercase;
   font-size: 1.5rem;
+}
+
+.section-title h2 {
+  margin-right: 1rem;
+}
+
+.section-title h2:hover {
+  cursor: pointer;
+  color: var(--pri);
+  text-decoration: underline;
+  transition: 0.3s ease;
 }
 
 .agent-list {
@@ -56,25 +98,41 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  padding: 2rem;
+  padding: 0 2rem 0 2rem;
 }
 
 .agent-card {
-  background-color: #233046;
+  background-color: var(--ter);
   padding: 1rem;
   border-radius: 8px;
   width: 200px;
-  color: white;
+  color: var(--pri);
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
 
+.agent-card img {
+  width: auto;
+  height: 200px;
+}
+
 .agent-card:hover {
   transform: scale(1.05);
 }
+
 .agent-img {
   width: 100%;
   border-radius: 5px;
   margin-bottom: 0.5rem;
+}
+
+.footer {
+  position: inherit;
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--pri);
+  background-color: var(--sec);
+  margin: 2rem 0 0 0;
+  padding: 1rem;
 }
