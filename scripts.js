@@ -100,7 +100,7 @@ function renderAgents(selectedRole){
       <img src="${agent.image}" alt="${agent.name}" class="agent-img"/>
       <h3>${agent.name}</h3>
       <p>${agent.role}</p>
-      <button onclick="playVoiceLine('${agent.audio}')">Wanna Hear My Voice?</button>
+      <button class="audio" onclick="playVoiceLine('${agent.audio}')">Wanna Hear My Voice?</button>
     `;
 
     agentList.appendChild(card);

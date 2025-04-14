@@ -12,6 +12,8 @@ body {
   padding: 0;
   background-color: var(--bg);
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
@@ -57,19 +59,30 @@ body {
 .filter {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex: 0.5;
   margin: 0 0 1rem 2rem;
-  width: 10%;
 }
 
 .filter-btn {
   font-size: medium;
   padding: 1rem;
+  color: var(--pri);
+  background-color: var(--bg);
+  border-radius: 50px;
+  margin: 5px 0;
+  justify-content: left;
+  text-align: left;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  background-color: var(--sec);
+  transition: 0.3s ease;
 }
 
 .agent {
   display: flex;
-  flex: 3;
+  flex: 3.5;
 }
 
 .section-title {
@@ -121,6 +134,11 @@ body {
   transform: scale(1.05);
 }
 
+.wrapper {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
 .agent-img {
   width: 100%;
   border-radius: 5px;
@@ -135,4 +153,11 @@ body {
   background-color: var(--sec);
   margin: 2rem 0 0 0;
   padding: 1rem;
+}
+
+.audio {
+  padding: 1rem;
+  color: var(--sec);
+  cursor: pointer;
+  border-radius: 100px;;
 }
