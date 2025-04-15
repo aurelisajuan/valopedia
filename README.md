@@ -2,7 +2,7 @@
 
 <img src="images/landing-page.png" >
 
-# Valopedia
+# [Valopedia](https://aurelisajuan.github.io/valopedia/)
 
 > It's your time to shine as the best player!
 
@@ -23,3 +23,11 @@
 1. Add informations about **maps** in Valorant.
 2. Explore each agents **abilities**.
 3. **Preview** of each agents abilities and ultimate.
+
+# Sources
+
+<p>Here is a list of the sources used to make Valopedia happen!</p>
+
+1. [Valorant Youtube](https://www.youtube.com/@valorant)
+2. [Audios]()
+3. [Art Piece](https://www.deviantart.com/lynwulf/art/Phoenix-Render-832843280)
