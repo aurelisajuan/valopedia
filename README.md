@@ -29,5 +29,5 @@
 <p>Here is a list of the sources used to make Valopedia happen!</p>
 
 1. [Valorant Youtube](https://www.youtube.com/@valorant)
-2. [Audios]()
-3. [Art Piece](https://www.deviantart.com/lynwulf/art/Phoenix-Render-832843280)
+2. [Audios](https://www.voicy.network/search/valorant-sound-effects)
+3. [Art Piece/ Images](https://www.deviantart.com/lynwulf/art/Phoenix-Render-832843280)
