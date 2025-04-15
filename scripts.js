@@ -63,7 +63,6 @@ const agents = [
 ]
 
 window.onload = function () {
-  const agentList = document.getElementById("agent-list");
   const filter = document.getElementById("filter");
 
   const roles = ["All", ...new Set(agents.map(agent => agent.role))];
@@ -97,11 +96,17 @@ function renderAgents(selectedRole){
     card.className = "agent-card";
 
     card.innerHTML = `
-      <img src="${agent.image}" alt="${agent.name}" class="agent-img"/>
-      <h3>${agent.name}</h3>
-      <p>${agent.role}</p>
-      <button class="audio" onclick="playVoiceLine('${agent.audio}')">Wanna Hear My Voice?</button>
+      <div class="img-container">
+        <img src="${agent.image}" alt="${agent.name}" class="agent-img"/>
+        <h3>${agent.name}</h3>
+        <p class="agent-role">${agent.role}</p>
+        <button class="audio" onclick="event.stopPropagation(); playVoiceLine('${agent.audio}')"><i class="fa-solid fa-play"></i></button>
+      </div>  
     `;
+
+    card.addEventListener("click", () => {
+      alert("You picked Agent " + agent.name + "\nRole: " + agent.role + "\n!Click the play button to hear their voice line!")
+    });
 
     agentList.appendChild(card);
   })

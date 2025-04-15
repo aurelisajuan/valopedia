@@ -123,6 +123,7 @@ body {
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .agent-card img {
@@ -132,6 +133,17 @@ body {
 
 .agent-card:hover {
   transform: scale(1.05);
+}
+
+.img-container {
+  width: 200px;
+  height: 60%;
+  background-color: var(--bg);
+  border-radius: 8px;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
 }
 
 .wrapper {
@@ -156,8 +168,27 @@ body {
 }
 
 .audio {
-  padding: 1rem;
-  color: var(--sec);
   cursor: pointer;
-  border-radius: 100px;;
+  border-radius: 50%;
+  background-color: var(--sec);
+  border: none;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+
+.audio:hover {
+  background-color: var(--shadow);
+  transition: 0.3s ease;
+}
+
+.fa-solid {
+  color: var(--pri);
+}
+
+.agent-role {
+  font-style: italic;
+  font-weight: 250;
 }
