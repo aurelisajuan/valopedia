@@ -1,81 +1,27 @@
-const agents = [
-  {
-    name: "Breach",
-    role: "Initiator",
-    image: "images/breach.png",
-    audio: "audio/breach.mp3",
-  },
-  {
-    name: "Brimstone",
-    role: "Controller",
-    image: "images/brim.png",
-    audio: "audio/brim.mp3",
-  },
-  {
-    name: "Chamber",
-    role: "Sentinel",
-    image: "images/chamber.png",
-    audio: "audio/chamber.mp3",
-  },
-  {
-    name: "Deadlock",
-    role: "Sentinel",
-    image: "images/deadlock.png",
-    audio: "audio/deadlock.mp3",
-  },
-  {
-    name: "Fade",
-    role: "Initiator",
-    image: "images/fade.png",
-    audio: "audio/fade.mp3",
-  },
-  {
-    name: "Gekko",
-    role: "Initiator",
-    image: "images/gekko.png",
-    audio: "audio/gekko.mp3",
-  },
-  {
-    name: "Omen",
-    role: "Controller",
-    image: "images/omen.png",
-    audio: "audio/omen.mp3",
-  },
-  {
-    name: "Reyna",
-    role: "Duelist",
-    image: "images/reyna.png",
-    audio: "audio/reyna.mp3",
-  },
-  {
-    name: "Viper",
-    role: "Controller",
-    image: "images/viper.png",
-    audio: "audio/viper.mp3",
-  },
-  {
-    name: "Yoru",
-    role: "Duelist",
-    image: "images/yoru.png",
-    audio: "audio/yoru.mp3",
+let agents = [];
+
+window.onload = async function () {
+  try{
+    const response = await fetch('./data/agents.json');
+    const data = await response.json();
+    agents = data.agents;
+
+    const filter = document.getElementById("filter");
+  
+    const roles = ["All", ...new Set(agents.map(agent => agent.role))];
+  
+    roles.forEach(role => {
+      const button = document.createElement("button");
+      button.textContent = role;
+      button.className = "filter-btn";
+      button.onclick = () => renderAgents(role);
+      filter.appendChild(button);
+    });
+  
+    renderAgents("All");
+  } catch (error) {
+    console.error("Error loading agents:", error);
   }
-
-]
-
-window.onload = function () {
-  const filter = document.getElementById("filter");
-
-  const roles = ["All", ...new Set(agents.map(agent => agent.role))];
-
-  roles.forEach(role => {
-    const button = document.createElement("button");
-    button.textContent = role;
-    button.className = "filter-btn";
-    button.onclick = () => renderAgents(role);
-    filter.appendChild(button);
-  });
-
-  renderAgents("All");
 };
 
 function playVoiceLine(filePath){
@@ -105,9 +51,64 @@ function renderAgents(selectedRole){
     `;
 
     card.addEventListener("click", () => {
-      alert("You picked Agent " + agent.name + "\nRole: " + agent.role + "\n!Click the play button to hear their voice line!")
+      openModal(agent);
     });
 
     agentList.appendChild(card);
   })
+}
+
+function openModal(agent) {
+  const modal = document.getElementById("agent-modal");
+  const video = document.getElementById("agent-video");
+  const desc = document.querySelector(".agent-desc");
+
+  let link = agent.link;
+  if (!link){
+    console.error("No link available for", agent.name);
+    return;
+  }
+
+  if (!link.includes("embed")){
+    const videoId = getLinkId(link);
+    link = "https://www.youtube.com/embed/" + videoId;
+  }
+
+  video.src = link + "?autoplay=1";
+
+  const descContent = Array.isArray(agent.desc)
+    ? agent.desc.join("<br>")
+    : agent.desc || "No description available";
+
+  desc.innerHTML = `
+    <h3>${agent.name}</h3>
+    <p>${descContent}</p>
+    <br>
+    <p>Press on the play button to listen to ${agent.name}'s voice line!</p>
+  `;
+
+  modal.style.display = "block";
+}
+
+function getLinkId(url){
+  const regex = /[?&]v=([^&#]+)/;
+  const match = url.match(regex);
+  return match ? match[1] : ""; 
+}
+
+document.querySelector(".close").addEventListener("click", () => {
+  const modal = document.getElementById("agent-modal");
+  const video = document.getElementById("agent-video");
+
+  modal.style.display = "none";
+  video.src = ""; 
+});
+
+window.onclick = function(event) {
+  const modal = document.getElementById("agent-modal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+    const video = document.getElementById("agent-video");
+    video.src = ""; 
+  }
 }

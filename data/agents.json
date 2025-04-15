@@ -1,0 +1,114 @@
+{
+  "agents": [
+    {
+      "name": "Breach",
+      "role": "Initiator",
+      "image": "images/breach.png",
+      "audio": "audio/breach.mp3",
+      "link": "https://www.youtube.com/watch?v=Rux0HjzKQbw&ab_channel=VALORANT",
+      "desc": [
+        "Origin: Sweden",
+        "Breach fires powerful, targeted kinetic blasts to aggressively clear a path through enemy ground. The damage and disruption he inflicts ensures no fight is ever fair."
+      ]
+    },
+    {
+      "name": "Brimstone",
+      "role": "Controller",
+      "image": "images/brim.png",
+      "audio": "audio/brim.mp3",
+      "link": "https://www.youtube.com/watch?v=7yHnJ_oNxTI&ab_channel=VALORANT",
+      "desc": [
+        "Origin: U.S.A.",
+        "Brimstone ensures his squad always has the advantage. His ability to deliver utility precisely and safely make him the unmatched boots-on-the-ground commander."
+      ]
+    },
+    {
+      "name": "Chamber",
+      "role": "Sentinel",
+      "image": "images/chamber.png",
+      "audio": "audio/chamber.mp3",
+      "link": "https://www.youtube.com/watch?v=FUoqAn5T4h4&ab_channel=VALORANT",
+      "desc": [
+        "Origin: France",
+        "Chamber expels aggressors with deadly precision. He leverages his custom arsenal to hold the line and pick off enemies from afar, with a contingency built for every plan."
+      ]
+    },
+    {
+      "name": "Deadlock",
+      "role": "Sentinel",
+      "image": "images/deadlock.png",
+      "audio": "audio/deadlock.mp3",
+      "link": "https://www.youtube.com/watch?v=UK7Tdob8HQw&ab_channel=VALORANT",
+      "desc": [
+        "Origin: Norway",
+        "Deadlock deploys an array of cutting-edge nanowire to secure the battlefield from even the most lethal assault. No one escapes her vigilant watch, nor survives her unyielding ferocity."
+      ]
+    },
+    {
+      "name": "Fade",
+      "role": "Initiator",
+      "image": "images/fade.png",
+      "audio": "audio/fade.mp3",
+      "link": "https://www.youtube.com/watch?v=e7VOQ1l20eo&ab_channel=VALORANT",
+      "desc": [
+        "Origin: Turkey",
+        "Fade unleashes the power of raw nightmares to seize enemy secrets. Attuned with terror itself, she hunts targets and reveals their deepest fears—before crushing them in the dark."
+      ]
+    },
+    {
+      "name": "Gekko",
+      "role": "Initiator",
+      "image": "images/gekko.png",
+      "audio": "audio/gekko.mp3",
+      "link": "https://www.youtube.com/watch?v=XWoxwdNh77o&ab_channel=Reven-Valorant",
+      "desc": [
+        "Origin: U.S.A.",
+        "Gekko leads a tight-knit crew of calamitous creatures. His buddies bound forward, scattering enemies out of the way, with Gekko chasing them down to regroup and go again."
+      ]
+    },
+    {
+      "name": "Omen",
+      "role": "Controller",
+      "image": "images/omen.png",
+      "audio": "audio/omen.mp3",
+      "link": "https://www.youtube.com/watch?v=_jJdWy6bDj4&list=PLTFsoy_DWCOPyVI1yJ2PGxsjHGhfBglTh&index=10&ab_channel=VALORANT",
+      "desc": [
+        "Origin: Unknown",
+        "Omen hunts in the shadows. He renders enemies blind, teleports across the field, then lets paranoia take hold as his foe scrambles to learn where he might strike next."
+      ]
+    },
+    {
+      "name": "Reyna",
+      "role": "Duelist",
+      "image": "images/reyna.png",
+      "audio": "audio/reyna.mp3",
+      "link": "https://www.youtube.com/watch?v=IzsQNYrq9AM&list=PLTFsoy_DWCOPyVI1yJ2PGxsjHGhfBglTh&index=2&ab_channel=VALORANT",
+      "desc": [
+        "Origin: Mexico",
+        "Reyna dominates single combat, popping off with each kill she scores. Her capability is only limited by her raw skill, making her highly dependent on performance."
+      ]
+    },
+    {
+      "name": "Viper",
+      "role": "Controller",
+      "image": "images/viper.png",
+      "audio": "audio/viper.mp3",
+      "link": "https://www.youtube.com/watch?v=9dOSy0EhLfQ&list=PLTFsoy_DWCOPyVI1yJ2PGxsjHGhfBglTh&index=7&ab_channel=VALORANT",
+      "desc": [
+        "Origin: U.S.A.",
+        "Viper deploys an array of poisonous chemical devices to control the battlefield and choke the enemy's vision. If the toxins don't kill her prey, her mindgames surely will."
+      ]
+    },
+    {
+      "name": "Yoru",
+      "role": "Duelist",
+      "image": "images/yoru.png",
+      "audio": "audio/yoru.mp3",
+      "link": "https://www.youtube.com/watch?v=GdOEQv-zQVw&ab_channel=VALORANT",
+      "desc": [
+        "Origin: Japan",
+        "Yoru ripes holes straight through reality to infiltrate enemy lines unseen. Using deception and aggression in equal measure, he gets the drop on each target before they know where to look."
+      ]
+    }
+  ]
+}
