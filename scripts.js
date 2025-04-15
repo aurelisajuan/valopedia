@@ -98,10 +98,10 @@ function renderAgents(selectedRole){
     card.innerHTML = `
       <div class="img-container">
         <img src="${agent.image}" alt="${agent.name}" class="agent-img"/>
-        <h3>${agent.name}</h3>
-        <p class="agent-role">${agent.role}</p>
-        <button class="audio" onclick="event.stopPropagation(); playVoiceLine('${agent.audio}')"><i class="fa-solid fa-play"></i></button>
       </div>  
+      <h3>${agent.name}</h3>
+      <p class="agent-role">${agent.role}</p>
+      <button class="audio" onclick="event.stopPropagation(); playVoiceLine('${agent.audio}')"><i class="fa-solid fa-play"></i></button>
     `;
 
     card.addEventListener("click", () => {
